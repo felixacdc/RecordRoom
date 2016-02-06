@@ -178,7 +178,7 @@
                 <div class="row">
                     <div class="footer-col col-md-4">
                         <h3>Direccion</h3>
-                        <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                        <p>9a. Calle 6-14 zona 1,<br>Retalhuleu</p>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>En la Web</h3>
@@ -186,23 +186,13 @@
                             <li>
                                 <a href="https://www.facebook.com/Sal%C3%B3n-y-Sp%C3%A1-Marbella-1687890978131192" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
                             </li>
-                            <!-- <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                            </li> -->
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>About Freelancer</h3>
-                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                        <h3>Telefonos</h3>
+                        <p>Cel. 5914-3127 <br>
+                          Cel. 4732-4466
+                        </p>
                     </div>
                 </div>
             </div>
@@ -211,7 +201,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Your Website 2014
+                        Sitio Web 2014
                     </div>
                 </div>
             </div>

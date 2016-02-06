@@ -7,7 +7,7 @@ try {
 
 	if ( $_POST ) {
 
-		if ($_POST['name'] != '' or $_POST['lastname'] != '' or $_POST['email'] != '' or $_POST['phone'] != '') {
+		if ($_POST['name'] != '' and $_POST['lastname'] != '' and $_POST['email'] != '' and $_POST['phone'] != '') {
 			$fnAdd = new Register($_POST['name'], $_POST['lastname'], $_POST['email'], $_POST['phone']);
 
 			$fnAdd->addRegister();
