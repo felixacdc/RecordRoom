@@ -201,7 +201,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Sitio Web 2014
+                        Arte y Diseño idea&dream
                     </div>
                 </div>
             </div>
