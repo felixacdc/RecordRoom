@@ -103,7 +103,7 @@ function fnvalidacion(){
 			Cargar Registrados
 -----------------------------------------*/
 
-function fullRegisters()
+/*function fullRegisters()
 {
 	$.ajax({
 		url: 'functions/call.Functions.Register.php',
@@ -125,7 +125,7 @@ function fullRegisters()
 			});
 		}
 	});
-}
+}*/
 
 $(document).ready(function(){
 
@@ -143,5 +143,5 @@ $(document).ready(function(){
 		$('#' +  id + ' ~ p').fadeOut().addClass('bounceOutLeft');
 	});
 
-	$(document).load(fullRegisters());
+	/*$(document).load(fullRegisters());*/
 });

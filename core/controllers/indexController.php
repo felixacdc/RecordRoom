@@ -18,13 +18,14 @@ try {
 		}
 
 	} else {
+        
+        $fnVerify = new Register();
+        
         $template = new Smarty();
+        
+        $template->assign('data', $fnVerify->fullRegisters());
 
         $template->display('home/index.tpl');
-        
-		/*$fnVerify = new Register(0, 0, 0, 0);
-
-		echo $fnVerify->fullRegisters();*/
 	}
 
 } catch (Exception $e) {

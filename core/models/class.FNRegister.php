@@ -7,7 +7,7 @@ class Register
 	private $email;
 	private $phone;
 
-	public function __construct($nameE, $lastnameE, $emailE, $phoneE){
+	public function __construct($nameE = null, $lastnameE = null, $emailE = null, $phoneE = null){
 
 		$this->name = $nameE;
 		$this->lastname = $lastnameE;
@@ -36,7 +36,7 @@ class Register
 		$db = new connectionClass();
 
 		$sql = $db->prepare('SELECT firstName, lastName, phone, email FROM userData');
-  	$numberRecord = $sql->execute();
+        $numberRecord = $sql->execute();
 
 		if ($numberRecord != 0) {
 
@@ -44,12 +44,14 @@ class Register
 			$i = 0;
 
 			while( $data = $sql->fetch(PDO::FETCH_ASSOC) ){
-				$dataArray[$i] = $data;
+				$dataArray[$i] = array('firstName'  => $data['firstName'],
+                                    'lastName'   => $data['lastName'],
+                                    'phone' => $data['phone'],
+                                    'email'     => $data['email']);
 				$i++;
 			}
 
-			header("Content-type: application/json");
-			return json_encode($dataArray);
+			return $dataArray;
 		}
 	}
 }

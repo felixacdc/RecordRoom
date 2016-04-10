@@ -394,3 +394,7 @@ footer .footer-below {
 .btn-little:focus{
     background-color: #3d1c53 !important;
 }
+
+#registered tbody tr{
+    background:#81B92E;
+}

@@ -21,7 +21,17 @@
                            </tr>
                        </thead>
                        <tbody>
+                            {assign var="numero" value=1}
 
+                            {foreach from=$data item=item}
+                                <tr>
+                                    <td>{$numero++}</td>
+                                    <td>{$item.firstName}</td>
+                                    <td>{$item.lastName}</td>
+                                    <td>{$item.phone}</td>
+                                    <td>{$item.email}</td>
+                                </tr>
+                            {/foreach}
                        </tbody>
                    </table>
                </div>
