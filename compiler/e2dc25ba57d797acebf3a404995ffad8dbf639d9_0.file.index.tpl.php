@@ -1,116 +1,45 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-10 18:31:37
+/* Smarty version 3.1.29, created on 2016-04-10 18:50:35
   from "/opt/lampp/htdocs/GitHub/RecordRoom/public/views/templates/home/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570a7fe9e17960_63930434',
+  'unifunc' => 'content_570a845b6033a9_58270259',
   'file_dependency' => 
   array (
     'e2dc25ba57d797acebf3a404995ffad8dbf639d9' => 
     array (
       0 => '/opt/lampp/htdocs/GitHub/RecordRoom/public/views/templates/home/index.tpl',
-      1 => 1460305894,
+      1 => 1460307033,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:layouts/front_layout.tpl' => 1,
   ),
 ),false)) {
-function content_570a7fe9e17960_63930434 ($_smarty_tpl) {
+function content_570a845b6033a9_58270259 ($_smarty_tpl) {
+$_smarty_tpl->ext->_inheritance->init($_smarty_tpl, true);
 ?>
-<!DOCTYPE html>
-<html lang="es">
 
-<head>
+<?php 
+$_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "content", array (
+  0 => 'block_503400475570a845b5d0977_56682516',
+  1 => false,
+  3 => 0,
+  2 => 0,
+));
+$_smarty_tpl->ext->_inheritance->endChild($_smarty_tpl);
+$_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:layouts/front_layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
+}
+/* {block 'content'}  file:home/index.tpl */
+function block_503400475570a845b5d0977_56682516($_smarty_tpl, $_blockParentStack) {
+?>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>Salón y Spá Marbella</title>
-
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="public/views/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="public/views/css/freelancer.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="public/views/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="public/views/css/animate.css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <?php echo '<script'; ?>
- src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"><?php echo '</script'; ?>
->
-    <![endif]-->
-
-</head>
-
-<body id="page-top" class="index">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top">Salón y Spá Marbella</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#signin">Registrarse</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#registered">Registrados</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="img/logo.png" alt="">
-                    <div class="intro-text">
-                        <span class="name">Registro 2016</span>
-                        <hr class="star-light">
-                        <span class="skills">Salón y Spá Marbella</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Sing In Section -->
+<!-- Sing In Section -->
     <section id="signin">
         <div class="container">
             <div class="row">
@@ -163,116 +92,7 @@ function content_570a7fe9e17960_63930434 ($_smarty_tpl) {
             </div>
         </div>
     </section>
-
-    <!-- Registered Section -->
-    <section class="success" id="registered">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Registrados</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="table-responsive">
-                       <table class="table table-striped" id="registered">
-                           <thead>
-                               <tr>
-                                   <th>No.</th>
-                                   <th>Nombre</th>
-                                   <th>Apellido</th>
-                                   <th>Telefono</th>
-                                   <th>Correo</th>
-                               </tr>
-                           </thead>
-                           <tbody>
-
-                           </tbody>
-                       </table>
-                   </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Direccion</h3>
-                        <p>9a. Calle 6-14 zona 1,<br>Retalhuleu</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>En la Web</h3>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="https://www.facebook.com/Sal%C3%B3n-y-Sp%C3%A1-Marbella-1687890978131192" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Telefonos</h3>
-                        <p>Cel. 5914-3127 <br>
-                          Cel. 4732-4466
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        Arte y Diseño idea&dream
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visible-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
-
-    <!-- jQuery -->
-    <?php echo '<script'; ?>
- src="public/views/js/jquery.js"><?php echo '</script'; ?>
->
-
-    <!-- Bootstrap Core JavaScript -->
-    <?php echo '<script'; ?>
- src="public/views/js/bootstrap.min.js"><?php echo '</script'; ?>
->
-
-    <!-- Plugin JavaScript -->
-    <?php echo '<script'; ?>
- src="public/views/js/jquery.easing.min.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="public/views/js/classie.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="public/views/js/cbpAnimatedHeader.js"><?php echo '</script'; ?>
->
-
-    <!-- Custom Theme JavaScript -->
-    <?php echo '<script'; ?>
- src="public/views/js/freelancer.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="public/views/js/jqProject.js"><?php echo '</script'; ?>
->
-
-</body>
-
-</html>
-<?php }
+<?php
+}
+/* {/block 'content'} */
 }
