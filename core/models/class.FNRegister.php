@@ -30,9 +30,6 @@ class Register
 																	)
 													);
 
-	  if( $rows == 1 )
-	    header("location: ../index.php");
-
 	}
 
 	public function fullRegisters(){
