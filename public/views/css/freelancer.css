@@ -389,3 +389,8 @@ footer .footer-below {
   opacity: 0;
   display: none;
 }
+
+.btn-little:hover,
+.btn-little:focus{
+    background-color: #3d1c53 !important;
+}

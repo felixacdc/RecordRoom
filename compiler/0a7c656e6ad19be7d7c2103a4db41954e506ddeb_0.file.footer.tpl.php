@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-10 18:45:59
+/* Smarty version 3.1.29, created on 2016-04-10 19:00:44
   from "/opt/lampp/htdocs/GitHub/RecordRoom/public/views/templates/partials/footer.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570a8347d80115_52479345',
+  'unifunc' => 'content_570a86bc7e7357_88993283',
   'file_dependency' => 
   array (
     '0a7c656e6ad19be7d7c2103a4db41954e506ddeb' => 
     array (
       0 => '/opt/lampp/htdocs/GitHub/RecordRoom/public/views/templates/partials/footer.tpl',
-      1 => 1460306757,
+      1 => 1460307642,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_570a8347d80115_52479345 ($_smarty_tpl) {
+function content_570a86bc7e7357_88993283 ($_smarty_tpl) {
 ?>
 <!-- Footer -->
 <footer class="text-center">
@@ -61,7 +61,7 @@ function content_570a8347d80115_52479345 ($_smarty_tpl) {
 
 <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
 <div class="scroll-top page-scroll visible-xs visible-sm">
-    <a class="btn btn-primary" href="#page-top">
+    <a class="btn btn-primary btn-little" href="#page-top">
         <i class="fa fa-chevron-up"></i>
     </a>
 </div><?php }
