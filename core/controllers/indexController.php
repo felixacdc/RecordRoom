@@ -36,40 +36,34 @@ try {
             
         } else {
             
-             $validation = new IndexValidation();
+            $validation = new IndexValidation();
                 
             if ( $validation->validator($_POST['code']) ){
 
                 $code = new Register();
 
                 if ( $code->searchCode($_POST['code']) ) {
-                    
+
                     if ( $validation->validatorRegister($_POST) ) {
-                        
+
                         $fnAdd = new Register($_POST);
 
-                        $fnAdd->addRegister();
+                        if ( $fnAdd->addRegister() ) {
+                            header("location: ?view=index&good=yes");
+                        } else {
+                            header("location: ?view=index&good=no");
+                        }
+                        
                     } else {
-                        echo 'error'; 
+                        header("location: ?view=index&good=no"); 
                     }
                 } else {
-                    echo 'Codigo invalido';
+                    header("location: ?view=index&good=no");
                 }
 
             } else {
-                echo "Codigo invalido";
-            }
-            
-            /* if ($_POST['name'] != '' and $_POST['lastname'] != '' and $_POST['email'] != '' and $_POST['phone'] != '') {
-                $fnAdd = new Register($_POST['name'], $_POST['lastname'], $_POST['email'], $_POST['phone']);
-
-                $fnAdd->addRegister();
-                header("location: ?view=index");
-
-            } else {
-                header("location: ?view=index");
-            }*/
-            
+                header("location: ?view=index&good=no");
+            }            
         }
 
 	} else {

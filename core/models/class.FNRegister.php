@@ -21,23 +21,32 @@ class Register
 	}
 
 	public function addRegister(){
-
-		$db = new connectionClass();
         
-        $code_id = $this::findCode($this->code);
+        try {
+            $db = new connectionClass();
 
-		$query = $db->prepare('INSERT INTO userData (firstName, lastName, phone, email, code_id)
-														VALUES (:firstName, :lastName, :phone, :email, :code_id)');
+            $code_id = $this::findCode($this->code);
 
-        $rows = $query->execute( array( ':firstName'   => $this->name,
-                                       ':lastName' => $this->lastname,
-                                       ':phone' => $this->phone,
-                                       ':email' => $this->email,
-                                       ':code_id' => $code_id
-                                )
-                            );
-        
-        /*$query = $db->prepare('UPDATE ');*/
+            $query = $db->prepare('INSERT INTO userData (firstName, lastName, phone, email, code_id)
+                                                            VALUES (:firstName, :lastName, :phone, :email, :code_id)');
+
+            $rows = $query->execute([ ':firstName'   => $this->name,
+                                           ':lastName' => $this->lastname,
+                                           ':phone' => $this->phone,
+                                           ':email' => $this->email,
+                                           ':code_id' => $code_id
+                                    ]
+                                );
+
+            $queryUpdate = $db->prepare('UPDATE codes SET state = 1 WHERE id = :code_id');
+
+            $rowsUpdate = $queryUpdate->execute([':code_id' => $code_id]);
+            
+            return true;
+            
+        } catch (Exception $e) {
+            return false;
+        }
 
 	}
 
@@ -53,10 +62,11 @@ class Register
 			$i = 0;
 
 			while( $data = $sql->fetch(PDO::FETCH_ASSOC) ){
-				$dataArray[$i] = array('firstName'  => $data['firstName'],
+				$dataArray[$i] = ['firstName'  => $data['firstName'],
                                     'lastName'   => $data['lastName'],
                                     'phone' => $data['phone'],
-                                    'email'     => $data['email']);
+                                    'email'     => $data['email']
+                                 ];
 				$i++;
 			}
 

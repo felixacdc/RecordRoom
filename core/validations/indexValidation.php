@@ -38,7 +38,7 @@ class IndexValidation
 
                 $rule01 = '/^[a-z]/i';
                 $rule02 = "/^[\d]{8}$/i";
-                $rule03 = '/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/';
+                $rule03 = "/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/";
 
                 if ( preg_match($rule01, $data['name']) 
                     and preg_match($rule01, $data['lastname']) 
