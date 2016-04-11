@@ -23,7 +23,7 @@ class Register
 		$query = $db->prepare('INSERT INTO userData (firstName, lastName, phone, email)
 														VALUES (:firstName, :lastName, :phone, :email)');
 
-	  $rows = $query->execute( array( ':firstName'   => $this->name,
+        $rows = $query->execute( array( ':firstName'   => $this->name,
 	                                  ':lastName' => $this->lastname,
 																		':phone' => $this->phone,
 																		':email' => $this->email
@@ -54,6 +54,27 @@ class Register
 			return $dataArray;
 		}
 	}
+    
+    public function searchCode($data)
+    {
+        try{
+            
+            $db = new connectionClass();
+
+            $sql = $db->prepare('SELECT code FROM codes WHERE code = :code AND state = 0');
+            $sql->execute([':code' => $data]);
+
+            if ($sql->rowCount() > 0) {
+                return true;
+            } else {
+                return false;
+            }
+            
+        } catch (Exception $e) {
+            return false;
+        }
+        
+    }
 }
 
  ?>

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-10 19:27:16
+/* Smarty version 3.1.29, created on 2016-04-10 20:57:12
   from "/opt/lampp/htdocs/GitHub/RecordRoom/public/views/templates/home/index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570a8cf487b638_47709478',
+  'unifunc' => 'content_570aa20889d327_66135917',
   'file_dependency' => 
   array (
     'e2dc25ba57d797acebf3a404995ffad8dbf639d9' => 
     array (
       0 => '/opt/lampp/htdocs/GitHub/RecordRoom/public/views/templates/home/index.tpl',
-      1 => 1460309209,
+      1 => 1460314516,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,14 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:layouts/front_layout.tpl' => 1,
   ),
 ),false)) {
-function content_570a8cf487b638_47709478 ($_smarty_tpl) {
+function content_570aa20889d327_66135917 ($_smarty_tpl) {
 $_smarty_tpl->ext->_inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "content", array (
-  0 => 'block_436738948570a8cf4861490_72858079',
+  0 => 'block_12709139570aa20887e4b2_22869269',
   1 => false,
   3 => 0,
   2 => 0,
@@ -36,7 +36,7 @@ $_smarty_tpl->ext->_inheritance->endChild($_smarty_tpl);
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:layouts/front_layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'content'}  file:home/index.tpl */
-function block_436738948570a8cf4861490_72858079($_smarty_tpl, $_blockParentStack) {
+function block_12709139570aa20887e4b2_22869269($_smarty_tpl, $_blockParentStack) {
 ?>
 
 
@@ -80,6 +80,13 @@ function block_436738948570a8cf4861490_72858079($_smarty_tpl, $_blockParentStack
                                 <label>Telefono</label>
                                 <input type="tel" name="phone" class="form-control" placeholder="Telefono" id="phone"  autocomplete="off">
                                 <p class="help-block text-danger animated bounceIn retraso-2" id="helpphone"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Codigo</label>
+                                <input type="text" name="code" class="form-control" placeholder="Codigo" id="code" autocomplete="off">
+                                <p class="help-block text-danger animated bounceIn retraso-2" id="helpcode"></p>
                             </div>
                         </div>
                         <br>

@@ -10,6 +10,7 @@ var firstName;
 var lastName;
 var email;
 var phone;
+var code;
 
 
 /*--------------------------------------
@@ -20,11 +21,13 @@ function limpiarInput(){
 	lastName=$("#lastname").val().trim();
 	email=$("#email").val().trim();
 	phone=$("#phone").val().trim();
+    code=$("#code").val().trim();
 
 	$("#name").val(firstName);
 	$("#lastname").val(lastName);
 	$("#email").val(email);
 	$("#phone").val(phone);
+    $("#code").val(code);
 }
 
 /*--------------------------------------
@@ -90,42 +93,48 @@ function fnvalidacion(){
 			$('#helpphone').fadeIn();
 			ejecutar=false;
 		}
+    
+        if (code==""){
+			$("#helpcode").text("Ingrese sus codigo");
+			$('#helpcode').fadeIn();
+			ejecutar=false;
+		} else if (!verifyOne.test(code)){
+			$("#helpcode").text("Ingrese solo letras");
+			$('#helpcode').fadeIn();
+			ejecutar=false;
+		}
 
 		if(ejecutar)
 		{
-			document.sentMessage.submit();
-			$("#buttone").attr('disabled','disabled');
+			var data = {"code": code};
+            ajaxVerify(data, "buttone", "index");
 		}
 
 }
 
 /*--------------------------------------
-			Cargar Registrados
+			ajax para un Formulario
 -----------------------------------------*/
-
-/*function fullRegisters()
+function ajaxVerify(array, btn, control)
 {
-	$.ajax({
-		url: 'functions/call.Functions.Register.php',
-		dataType: "json",
-		success: function(data){
-			$('#registered tbody').html('');
-			var i = 1;
-			$.each(data,function(index){
-				var firstData = data[index];
-				$("#registered tbody").append('<tr>');
-				$.each(firstData,function(_index){
-					if (_index == 'firstName') {
-						$("#registered tbody").append('<td>'+i+'</td>');
-						i++;
-					}
-					$("#registered tbody").append('<td>'+firstData[_index]+'</td>');
-				});
-				$("#registered tbody").append('</tr>');
-			});
-		}
-	});
-}*/
+    $.ajax({
+        type: 'POST',
+        url: '?view=' + control,
+        data: {
+            ajaxData: JSON.stringify(array)
+        },success: function(answer){
+            if (answer != ""){
+                $("#helpcode").text(answer);
+                $('#helpcode').fadeIn();
+            }else{
+                $('#' + btn).attr('disabled','disabled');
+                document.sentMessage.submit();
+            }
+        },error: function(result) {
+            console.log(result);
+        }
+    });
+}
 
 $(document).ready(function(){
 
@@ -142,6 +151,5 @@ $(document).ready(function(){
 		var id = jQuery(this).attr("id");
 		$('#' +  id + ' ~ p').fadeOut().addClass('bounceOutLeft');
 	});
-
-	/*$(document).load(fullRegisters());*/
+    
 });

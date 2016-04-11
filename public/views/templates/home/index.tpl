@@ -44,6 +44,13 @@
                                 <p class="help-block text-danger animated bounceIn retraso-2" id="helpphone"></p>
                             </div>
                         </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Codigo</label>
+                                <input type="text" name="code" class="form-control" placeholder="Codigo" id="code" autocomplete="off">
+                                <p class="help-block text-danger animated bounceIn retraso-2" id="helpcode"></p>
+                            </div>
+                        </div>
                         <br>
                         <div class="row">
                             <div class="form-group col-xs-12">

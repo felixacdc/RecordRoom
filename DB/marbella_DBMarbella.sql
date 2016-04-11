@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 10-04-2016 a las 20:47:29
+-- Tiempo de generación: 10-04-2016 a las 20:52:32
 -- Versión del servidor: 10.1.10-MariaDB
 -- Versión de PHP: 5.5.33
 
@@ -150,7 +150,7 @@ CREATE TABLE `userData` (
   `lastName` varchar(200) CHARACTER SET latin1 NOT NULL,
   `phone` varchar(10) CHARACTER SET latin1 NOT NULL,
   `email` varchar(200) CHARACTER SET latin1 NOT NULL,
-  `code_id` int(11) NOT NULL
+  `code_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -179,7 +179,7 @@ ALTER TABLE `userData`
 -- AUTO_INCREMENT de la tabla `userData`
 --
 ALTER TABLE `userData`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Restricciones para tablas volcadas
 --
