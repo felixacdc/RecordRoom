@@ -152,4 +152,6 @@ $(document).ready(function(){
 		$('#' +  id + ' ~ p').fadeOut().addClass('bounceOutLeft');
 	});
     
+    $(".alert").fadeOut(7000);
+    
 });

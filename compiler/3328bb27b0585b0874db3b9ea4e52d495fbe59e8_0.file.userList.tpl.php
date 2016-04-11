@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-10 19:25:08
+/* Smarty version 3.1.29, created on 2016-04-11 10:23:13
   from "/opt/lampp/htdocs/GitHub/RecordRoom/public/views/templates/partials/userList.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570a8c74acaf21_95247879',
+  'unifunc' => 'content_570b5ef1543e74_09441622',
   'file_dependency' => 
   array (
     '3328bb27b0585b0874db3b9ea4e52d495fbe59e8' => 
     array (
       0 => '/opt/lampp/htdocs/GitHub/RecordRoom/public/views/templates/partials/userList.tpl',
-      1 => 1460309106,
+      1 => 1460362991,
       2 => 'file',
     ),
   ),
@@ -19,14 +19,14 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_570a8c74acaf21_95247879 ($_smarty_tpl) {
+function content_570b5ef1543e74_09441622 ($_smarty_tpl) {
 ?>
 <!-- Registered Section -->
 <section class="success" id="registered">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2>Registrados</h2>
+                <h2 class="bigTitles">Registrados</h2>
                 <hr class="star-light">
             </div>
         </div>
