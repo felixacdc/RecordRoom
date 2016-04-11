@@ -4,41 +4,58 @@ class IndexValidation
 {
     public function validator($data)
     {
-        if ( !empty(trim($data)) ){
+        try {
             
-            $rules = '/^[a-z]{5,50}$/i';
+            if ( !empty(trim($data)) ){
             
-            if ( preg_match($rules, $data) ){
-                return true;
-            } else {
+                $rules = '/^[a-z]{5,50}$/i';
+
+                if ( preg_match($rules, $data) ){
+                    return true;
+                } else {
+                    return false;
+                }
+
+            } else{
                 return false;
             }
             
-        } else{
+        } catch(Exception $e) {
             return false;
         }
+        
     }
     
     public function validatorRegister($data)
     {
-        if ( !empty(trim($data['name'])) 
-            and !empty(trim($data['lastname'])) 
-            and !empty(trim($data['email'])) 
-            and !empty(trim($data['phone'])) ) {
+        
+        try {
             
-            $rule01 = '/^[a-z]/i';
-            $rule02;
-            $rule03;
-            
-            if ( preg_match($rule01, $data['name']) 
-                and preg_match($rule01, $data['lastname']) ) {
-                
-                echo 'vamos bien';
+            if ( !empty(trim($data['name'])) 
+                and !empty(trim($data['lastname'])) 
+                and !empty(trim($data['email'])) 
+                and !empty(trim($data['phone'])) ) {
+
+                $rule01 = '/^[a-z]/i';
+                $rule02 = "/^[\d]{8}$/i";
+                $rule03 = '/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/';
+
+                if ( preg_match($rule01, $data['name']) 
+                    and preg_match($rule01, $data['lastname']) 
+                    and preg_match($rule02, $data['phone']) 
+                    and preg_match($rule03, $data['email']) ) {
+
+                    return true;
+                } else {
+                    return false;
+                }
             } else {
-                echo 'error';
+                return true;
             }
-        } else {
-            echo 'error';
+            
+        } catch (Exception $e) {
+            return false;
         }
+    
     }
 }

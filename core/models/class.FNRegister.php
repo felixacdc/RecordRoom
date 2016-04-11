@@ -6,29 +6,38 @@ class Register
 	private $lastname;
 	private $email;
 	private $phone;
+    private $code;
 
-	public function __construct($nameE = null, $lastnameE = null, $emailE = null, $phoneE = null){
-
-		$this->name = $nameE;
-		$this->lastname = $lastnameE;
-		$this->email = $emailE;
-		$this->phone = $phoneE;
+	public function __construct($data = null){
+        
+        if ( $data != null ) {
+            $this->name = $data['name'];
+            $this->lastname = $data['lastname'];
+            $this->email = $data['email'];
+            $this->phone = $data['phone'];
+            $this->code = $data['code'];
+        }
 
 	}
 
 	public function addRegister(){
 
 		$db = new connectionClass();
+        
+        $code_id = $this::findCode($this->code);
 
-		$query = $db->prepare('INSERT INTO userData (firstName, lastName, phone, email)
-														VALUES (:firstName, :lastName, :phone, :email)');
+		$query = $db->prepare('INSERT INTO userData (firstName, lastName, phone, email, code_id)
+														VALUES (:firstName, :lastName, :phone, :email, :code_id)');
 
         $rows = $query->execute( array( ':firstName'   => $this->name,
-	                                  ':lastName' => $this->lastname,
-																		':phone' => $this->phone,
-																		':email' => $this->email
-																	)
-													);
+                                       ':lastName' => $this->lastname,
+                                       ':phone' => $this->phone,
+                                       ':email' => $this->email,
+                                       ':code_id' => $code_id
+                                )
+                            );
+        
+        /*$query = $db->prepare('UPDATE ');*/
 
 	}
 
@@ -61,7 +70,7 @@ class Register
             
             $db = new connectionClass();
 
-            $sql = $db->prepare('SELECT code FROM codes WHERE code = :code AND state = 0');
+            $sql = $db->prepare('SELECT id FROM codes WHERE code = :code AND state = 0');
             $sql->execute([':code' => $data]);
 
             if ($sql->rowCount() > 0) {
@@ -72,6 +81,32 @@ class Register
             
         } catch (Exception $e) {
             return false;
+        }
+        
+    }
+    
+    public static function findCode($data)
+    {
+        try{
+            
+            $db = new connectionClass();
+
+            $sql = $db->prepare('SELECT id FROM codes WHERE code = :code AND state = 0');
+            $sql->execute([':code' => $data]);
+
+            if ($sql->rowCount() > 0) {
+                
+                while($datos = $sql->fetch()) {
+                    $id = $datos[0];
+                }
+                
+                return $id;
+            } else {
+                return null;
+            }
+            
+        } catch (Exception $e) {
+            return null;
         }
         
     }

@@ -43,8 +43,15 @@ try {
                 $code = new Register();
 
                 if ( $code->searchCode($_POST['code']) ) {
-                    echo 'GOOD';
-                    echo $validation->validatorRegister($_POST);
+                    
+                    if ( $validation->validatorRegister($_POST) ) {
+                        
+                        $fnAdd = new Register($_POST);
+
+                        $fnAdd->addRegister();
+                    } else {
+                        echo 'error'; 
+                    }
                 } else {
                     echo 'Codigo invalido';
                 }
