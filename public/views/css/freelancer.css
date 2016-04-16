@@ -215,25 +215,6 @@ section.success a.active {
     margin: 0 0 30px;
   }
 }
-
-@media (max-width: 340px) {
-    .navbar-fixed-top .navbar-brand {
-        font-size: 1em;
-    }
-}
-
-@media (max-width: 290px) {
-    .navbar-fixed-top .navbar-brand {
-        font-size: .7em;
-    }
-}
-
-@media (max-width: 360px) {
-    .bigTitles {
-        font-size: 2.3em;
-    }
-}
-
 .btn-outline {
   color: white;
   font-size: 20px;
@@ -408,12 +389,10 @@ footer .footer-below {
   opacity: 0;
   display: none;
 }
-
 .btn-little:hover,
-.btn-little:focus{
-    background-color: #3d1c53 !important;
+.btn-little:focus {
+  background-color: #3d1c53 !important;
 }
-
-#registered tbody tr{
-    background:#81B92E;
+#registered tbody tr {
+  background: #81B92E;
 }
